@@ -46,8 +46,13 @@ export const NavBar = () => {
                 Contact
               </Link>
             </div>
-            <button className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#f0f2f4] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
-              <ParameterIcon />
+            <button
+              type="button"
+              aria-label="Paramètres"
+              title="Paramètres"
+              className="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 bg-[#f0f2f4] text-[#111418] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5 hover:bg-[#e4e7ea] focus:outline-none focus:ring-2 focus:ring-[#1980e6] focus:ring-offset-2 transition-colors"
+            >
+              <ParameterIcon aria-hidden="true" />
             </button>
           </div>
         </header>

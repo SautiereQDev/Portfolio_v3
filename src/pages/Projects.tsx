@@ -4,13 +4,16 @@ import projects from "../data/projects.json";
 
 export const Projects = () => {
   return (
-    <>
-      <img
-        src={banner}
-        alt="banner"
-        className="object-cover mb-6 mx-auto max-w-xl w-full"
-      />{" "}
-      <div className="flex flex-col gap-12">
+    <main>
+      <figure>
+        <img
+          src={banner}
+          alt="banner"
+          className="object-cover mb-6 mx-auto max-w-xl w-full"
+        />
+        <figcaption className="sr-only">Project banner</figcaption>
+      </figure>
+      <section className="flex flex-col gap-12">
         {projects.map((project) => (
           <ProjectCard
             title={project.title}
@@ -23,8 +26,8 @@ export const Projects = () => {
             key={project.title}
           />
         ))}
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 

@@ -6,7 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 const sanitizeOptions: IOptions = {
   allowedTags: [], // No HTML tags allowed
   allowedAttributes: {}, // No HTML attributes allowed
-  disallowedTagsMode: "recursiveEscape", // Valid value for DisallowedTagsModes
+  disallowedTagsMode: "recursiveEscape",
 };
 
 const sanitizeInput = (input: string): string => {
@@ -57,20 +57,18 @@ export const Contact = () => {
   };
 
   return (
-    <div className="relative flex size-full min-h-screen flex-col bg-white group\/design-root overflow-x-hidden font-[Manrope]">
-      <div className="layout-container flex h-full grow flex-col">
-        <div className="px-40 flex flex-1 justify-center py-5">
-          <div className="layout-content-container flex flex-col max-w-[960px] flex-1">
-            <div className="flex flex-wrap justify-between gap-3 p-4">
-              <div className="flex min-w-72 flex-col gap-3">
-                <p className="text-[#111418] tracking-light text-[32px] font-bold leading-tight">
-                  Créons ensemble quelque chose de génial
-                </p>
-                <p className="text-[#637588] text-sm font-normal leading-normal">
-                  Remplissez le formulaire ci-dessous pour me contacter et discuter de votre projet, je vous répondrais au plus vite.
-                </p>
-              </div>
-            </div>
+    <main className="relative flex min-h-screen flex-col bg-white group\/design-root overflow-x-hidden font-[Manrope]">
+      <section className="layout-container flex h-full grow flex-col">
+        <header className="px-40 flex flex-1 justify-center py-5">
+          <article className="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <header className="p-4">
+              <h1 className="text-[#111418] tracking-light text-[32px] font-bold leading-tight">
+                Créons ensemble quelque chose de génial
+              </h1>
+              <p className="text-[#637588] text-sm font-normal leading-normal">
+                Remplissez le formulaire ci-dessous pour me contacter et discuter de votre projet, je vous répondrais au plus vite.
+              </p>
+            </header>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="flex max-w-[480px] flex-wrap items-end gap-4 px-4 py-3">
                 <label className="flex flex-col min-w-40 flex-1">
@@ -153,10 +151,10 @@ export const Contact = () => {
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-      </div>
-    </div>
+          </article>
+        </header>
+      </section>
+    </main>
   );
 };
 
